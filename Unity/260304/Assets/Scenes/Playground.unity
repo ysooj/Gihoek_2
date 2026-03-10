@@ -125,6 +125,33 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &118896993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8776941384669977394, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1968649487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &118896995
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118896993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5a78779463c3574985e2281012ba062, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &384885658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,7 +1479,7 @@ PrefabInstance:
     - target: {fileID: 2434094773683431886, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 3216
+      value: 3312
       objectReference: {fileID: 0}
     - target: {fileID: 3977729701967069658, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
@@ -1462,13 +1489,38 @@ PrefabInstance:
     - target: {fileID: 3977729701967069658, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1249
+      value: 1345
       objectReference: {fileID: 0}
     - target: {fileID: 4567863251223584133, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1488304715}
+    - target: {fileID: 4604171034141207449, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604171034141207449, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604171034141207449, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604171034141207449, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604171034141207449, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6513657095180327373, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_RootOrder
@@ -1522,6 +1574,31 @@ PrefabInstance:
     - target: {fileID: 6513657095180327373, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340356113309539935, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340356113309539935, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340356113309539935, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340356113309539935, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340356113309539935, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8776941384669977394, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
