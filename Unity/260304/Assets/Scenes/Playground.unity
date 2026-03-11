@@ -1456,6 +1456,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8345070700268369568}
     m_Modifications:
+    - target: {fileID: 1681318247, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab, type: 3}
+      propertyPath: buildingAnimator
+      value: 
+      objectReference: {fileID: 118896995}
     - target: {fileID: 726480476706047465, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_Mesh
@@ -1479,7 +1483,7 @@ PrefabInstance:
     - target: {fileID: 2434094773683431886, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 3312
+      value: 3318
       objectReference: {fileID: 0}
     - target: {fileID: 3977729701967069658, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
@@ -1489,7 +1493,7 @@ PrefabInstance:
     - target: {fileID: 3977729701967069658, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1345
+      value: 1351
       objectReference: {fileID: 0}
     - target: {fileID: 4567863251223584133, guid: c7d75ee26bb4c1e4db3d1ecbccb88fab,
         type: 3}
