@@ -6,6 +6,8 @@ public class MonsterAI : MonoBehaviour
 {
     public GameObject target; // 플레이어 게임 오브젝트를 저장할 변수. 즉, 몬스터가 추적할 대상이 된다.
     public GameObject bullet; // 몬스터가 발사할 총알 게임 오브젝트를 저장할 변수. 즉, 몬스터가 공격할 때 사용할 총알 프리팹이 된다.
+    public Transform bulletCreatePosition;  // 총알이 생성될 위치를 나타내는 변수. 즉, 몬스터가 공격할 때 총알이 생성될 위치를 지정하는 역할을 한다. 이 변수를 사용하면 총알이 몬스터의 발에서 생성되도록 할 수 있다.
+    // GameObject가 아니라 Transform으로 가져온 이유는, 우리는 위치만 필요하기 때문이다. Transform은 게임 오브젝트의 위치, 회전, 크기를 나타내는 컴포넌트이므로, 이 변수를 사용하면 총알이 생성될 위치를 쉽게 지정할 수 있다. 
 
     public float speed; // Unity의 Inspector 창에서 몬스터의 이동 속도를 조절할 수 있도록 하는 변수.
 
@@ -17,6 +19,10 @@ public class MonsterAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(target == null) 
+            return; 
+        // 타겟이 없는 경우, 즉 플레이어가 없는 경우에는 아무 것도 하지 않고 함수를 종료한다. 이렇게 하면 타겟이 없는 상황에서도 몬스터가 오류 없이 정상적으로 작동할 수 있다.
+        
         // 1. 응시
         transform.LookAt(target.transform.position); // 몬스터가 타겟을 바라보도록 한다.
                                                      // 몬스터가 바라본다. target의 위치를.
@@ -39,8 +45,10 @@ public class MonsterAI : MonoBehaviour
             if (Time.time - lastAttackTime >= coolTime)
             {
                 Debug.Log("공격!"); // 몬스터가 공격할 때마다 콘솔에 "공격!"이라는 메시지를 출력한다.
-                Instantiate(bullet, transform.position, transform.rotation); // 총알 게임 오브젝트를 동적으로 생성한다. 즉, 몬스터가 공격할 때마다 총알이 생성된다. Instantiate는 Unity에서 게임 오브젝트를 복제해서 생성하는 함수이다. bullet은 몬스터가 발사할 총알 게임 오브젝트를 저장하는 변수이므로, 이 함수를 사용하면 몬스터가 공격할 때마다 총알이 생성된다.
+                Instantiate(bullet, bulletCreatePosition.position, transform.rotation); // 총알 게임 오브젝트를 동적으로 생성한다. 즉, 몬스터가 공격할 때마다 총알이 생성된다. Instantiate는 Unity에서 게임 오브젝트를 복제해서 생성하는 함수이다. bullet은 몬스터가 발사할 총알 게임 오브젝트를 저장하는 변수이므로, 이 함수를 사용하면 몬스터가 공격할 때마다 총알이 생성된다.
                 // 총알이 생성될 때의 위치는 몬스터의 현재 위치(transform.position)이고, 총알이 생성될 때의 회전은 몬스터의 현재 회전(transform.rotation)이다. 이렇게 하면 총알이 몬스터가 바라보는 방향으로 발사된다.
+                // transform.position으로 위치를 설정하면, 몬스터의 발에서 총알이 생성된다.
+
 
                 lastAttackTime = Time.time; // 몬스터가 공격한 시간을 현재 시간으로 업데이트한다. 이렇게 하면 다음 공격까지의 간격을 계산할 수 있다.
                                             // 즉, 이 변수를 업데이트하지 않으면 몬스터가 매 프레임마다 공격하게 된다. 하지만 이 변수를 업데이트하면 몬스터가 공격한 후 일정한 시간 간격을 두고 다음 공격을 하게 된다.
